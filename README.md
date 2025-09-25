@@ -11,7 +11,7 @@ This tool helps security researchers and penetration testers analyze **HTTP traf
 > Unauthorized use against systems you do not own or have permission to test is **illegal** and punishable by law.  
 > The author assumes **no liability** for misuse or damages caused by this tool.
 
----
+
 
 ## ✨ Features
 
@@ -27,7 +27,7 @@ This tool helps security researchers and penetration testers analyze **HTTP traf
 - **Verbose Logging & Reporting:**  
   Saves findings to a structured Markdown report.
 
----
+
 
 ## 📦 Dependencies
 
@@ -54,7 +54,7 @@ Install via pip:
 pip install scapy
 ```
 
----
+
 
 ## 🔧 Usage
 
@@ -78,7 +78,7 @@ sudo python3 mitm_tool.py -t <TARGET_IP> -g <GATEWAY_IP> -i <INTERFACE> [OPTIONS
 | `-o`, `--output` | Save results to Markdown file. |
 | `-v`, `--verbose` | Enable verbose debug output. |
 
----
+
 
 ### Example Commands
 
@@ -97,7 +97,7 @@ Verbose HTTP analysis only:
 sudo python3 mitm_tool.py -t 192.168.1.101 -g 192.168.1.1 --scan -v
 ```
 
----
+
 
 ## 📄 Output
 
@@ -109,23 +109,19 @@ sudo python3 mitm_tool.py -t 192.168.1.101 -g 192.168.1.1 --scan -v
   - 🟣 **VULN** – Security vulnerabilities
 
 ### Markdown Report Example
-```markdown
-# IoT Security MITM Tool Report
 
-**Scan Started:** 2025-09-25 16:30:21  
-**Target:** `192.168.1.101`  
-**Gateway:** `192.168.1.1`  
-**Interface:** `wlan0`
+> # IoT Security MITM Tool Report
+> **Scan Started:** 2025-09-25 16:30:21  
+> **Target:** `192.168.1.101`  
+> **Gateway:** `192.168.1.1`  
+> **Interface:** `wlan0`
+>
+> ## Log
+> **[VULN]** DEPRECATED TLS VERSION DETECTED! This is a high-risk finding.  
+> **[VULN]** PLAINTEXT SENSITIVE DATA DETECTED over HTTP!  
+> **[VULN]** Type: Password  
+> **[VULN]** Data: admin123
 
-## Log
-
-**[VULN]** DEPRECATED TLS VERSION DETECTED! This is a high-risk finding.  
-**[VULN]** PLAINTEXT SENSITIVE DATA DETECTED over HTTP!  
-**[VULN]** Type: Password  
-**[VULN]** Data: admin123
-```
-
----
 
 ## 🛡️ Security Notes
 
@@ -133,7 +129,7 @@ sudo python3 mitm_tool.py -t 192.168.1.101 -g 192.168.1.1 --scan -v
 - **Always restore ARP tables** after testing (the tool handles this automatically on exit).
 - Use in a **controlled lab environment** whenever possible.
 
----
+
 
 ## 🚀 Roadmap / Future Improvements
 
@@ -141,21 +137,21 @@ sudo python3 mitm_tool.py -t 192.168.1.101 -g 192.168.1.1 --scan -v
 - [ ] Add active SSL downgrade attack detection.
 - [ ] JSON/HTML reporting format.
 
----
+
 
 ## 📜 License
 
 This project is released under the **MIT License**.  
 Use at your own risk.
 
----
+
 
 ## 🤝 Contributions
 
 Pull requests and improvements are welcome.  
 Make sure to follow secure coding practices and include clear documentation.
 
----
+
 
 ## 🙏 Acknowledgements
 
